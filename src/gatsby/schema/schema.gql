@@ -184,7 +184,17 @@ type MarkdownWordCount {
   words: Int
 }
 
-type MarkdownRemark implements Node @childOf(mimeTypes: ["text/markdown", "text/x-markdown"], types: ["contentfulPostMetaDescriptionTextNode", "contentfulPostBodyTextNode", "contentfulPageMetaDescriptionTextNode", "contentfulPageBodyTextNode"]) @dontInfer {
+type MarkdownRemark implements Node
+  @childOf(
+    mimeTypes: ["text/markdown", "text/x-markdown"]
+    types: [
+      "contentfulPostMetaDescriptionTextNode"
+      "contentfulPostBodyTextNode"
+      "contentfulPageMetaDescriptionTextNode"
+      "contentfulPageBodyTextNode"
+    ]
+  )
+  @dontInfer {
   frontmatter: MarkdownRemarkFrontmatter
   excerpt: String
   rawMarkdownBody: String
@@ -239,11 +249,13 @@ type ContentfulAssetSys {
   revision: Int
 }
 
-type ContentfulPost implements ContentfulReference & ContentfulEntry & Node @dontInfer {
+type ContentfulPost implements ContentfulReference & ContentfulEntry & Node
+  @dontInfer {
   contentful_id: String!
   node_locale: String!
   title: String
   slug: String
+  ordering: Int
   publishDate: Date @dateformat
   heroImage: ContentfulAsset @link(by: "id", from: "heroImage___NODE")
   tags: [ContentfulTag] @link(by: "id", from: "tags___NODE")
@@ -252,10 +264,12 @@ type ContentfulPost implements ContentfulReference & ContentfulEntry & Node @don
   createdAt: Date @dateformat
   updatedAt: Date @dateformat
   sys: ContentfulPostSys
-  metaDescription: contentfulPostMetaDescriptionTextNode @link(by: "id", from: "metaDescription___NODE")
+  metaDescription: contentfulPostMetaDescriptionTextNode
+    @link(by: "id", from: "metaDescription___NODE")
 }
 
-type ContentfulTag implements ContentfulReference & ContentfulEntry & Node @dontInfer {
+type ContentfulTag implements ContentfulReference & ContentfulEntry & Node
+  @dontInfer {
   contentful_id: String!
   node_locale: String!
   title: String
@@ -283,7 +297,9 @@ type ContentfulTagSysContentTypeSys {
   id: String
 }
 
-type contentfulPostBodyTextNode implements Node @childOf(mimeTypes: [], types: ["ContentfulPost"]) @dontInfer {
+type contentfulPostBodyTextNode implements Node
+  @childOf(mimeTypes: [], types: ["ContentfulPost"])
+  @dontInfer {
   body: String
   sys: contentfulPostBodyTextNodeSys
 }
@@ -308,7 +324,9 @@ type ContentfulPostSysContentTypeSys {
   id: String
 }
 
-type contentfulPostMetaDescriptionTextNode implements Node @childOf(mimeTypes: [], types: ["ContentfulPost"]) @dontInfer {
+type contentfulPostMetaDescriptionTextNode implements Node
+  @childOf(mimeTypes: [], types: ["ContentfulPost"])
+  @dontInfer {
   metaDescription: String
   sys: contentfulPostMetaDescriptionTextNodeSys
 }
@@ -317,20 +335,24 @@ type contentfulPostMetaDescriptionTextNodeSys {
   type: String
 }
 
-type ContentfulPage implements ContentfulReference & ContentfulEntry & Node @dontInfer {
+type ContentfulPage implements ContentfulReference & ContentfulEntry & Node
+  @dontInfer {
   contentful_id: String!
   node_locale: String!
   title: String
   slug: String
   body: contentfulPageBodyTextNode @link(by: "id", from: "body___NODE")
-  metaDescription: contentfulPageMetaDescriptionTextNode @link(by: "id", from: "metaDescription___NODE")
+  metaDescription: contentfulPageMetaDescriptionTextNode
+    @link(by: "id", from: "metaDescription___NODE")
   spaceId: String
   createdAt: Date @dateformat
   updatedAt: Date @dateformat
   sys: ContentfulPageSys
 }
 
-type contentfulPageBodyTextNode implements Node @childOf(mimeTypes: [], types: ["ContentfulPage"]) @dontInfer {
+type contentfulPageBodyTextNode implements Node
+  @childOf(mimeTypes: [], types: ["ContentfulPage"])
+  @dontInfer {
   body: String
   sys: contentfulPageBodyTextNodeSys
 }
@@ -339,7 +361,9 @@ type contentfulPageBodyTextNodeSys {
   type: String
 }
 
-type contentfulPageMetaDescriptionTextNode implements Node @childOf(mimeTypes: [], types: ["ContentfulPage"]) @dontInfer {
+type contentfulPageMetaDescriptionTextNode implements Node
+  @childOf(mimeTypes: [], types: ["ContentfulPage"])
+  @dontInfer {
   metaDescription: String
   sys: contentfulPageMetaDescriptionTextNodeSys
 }

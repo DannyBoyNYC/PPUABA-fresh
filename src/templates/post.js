@@ -54,6 +54,7 @@ export const query = graphql`
     contentfulPost(slug: { eq: $slug }) {
       title
       slug
+      # ordering
       metaDescription {
         internal {
           content
