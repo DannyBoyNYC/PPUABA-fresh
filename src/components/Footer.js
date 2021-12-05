@@ -29,7 +29,9 @@ const Item = styled.li`
     width: auto;
   }
   a {
-    font-weight: 600;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 0.875rem;
     transition: all 0.2s;
     color: ${(props) => props.theme.colors.text};
     &:hover {
