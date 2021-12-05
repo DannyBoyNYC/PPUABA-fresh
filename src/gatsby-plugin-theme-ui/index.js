@@ -5,11 +5,11 @@ export default {
     primary: '#121212',
     secondary: '#e9e9e9',
     tertiary: '#f3f3f3',
-    highlight: '#5b8bf7',
+    highlight: '#553e37',
+    ppuaba: '#402f29',
   },
   fonts: {
-    body:
-      '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+    body: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
   },
   sizes: {
     maxWidth: '1050px',

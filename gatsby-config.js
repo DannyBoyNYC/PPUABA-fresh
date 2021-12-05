@@ -17,12 +17,16 @@ try {
 
 module.exports = {
   siteMetadata: {
-    title: 'GCN',
+    title: 'PPUABA',
     description:
-      'A starter template to build amazing static websites with Gatsby, Contentful and Netlify',
-    siteUrl: 'https://gcn.netlify.app',
+      'Website of the Park Place Underhill Avenue block Association.',
+    siteUrl: 'https://ppuaba.com',
     image: '/images/share.jpg',
     menuLinks: [
+      {
+        name: 'Park Place / Underhill Avenue Block Association',
+        slug: '/',
+      },
       {
         name: 'Home',
         slug: '/',
@@ -32,11 +36,16 @@ module.exports = {
         slug: '/about/',
       },
       {
+        name: 'Join',
+        slug: '/join-ppuaba/',
+      },
+
+      {
         name: 'Contact',
         slug: '/contact/',
       },
     ],
-    postsPerFirstPage: 7,
+    postsPerFirstPage: 100,
     postsPerPage: 6,
     basePath: '/',
   },
