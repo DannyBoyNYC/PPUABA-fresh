@@ -1,4 +1,34 @@
-# gatsby-starter-gcn
+# PPUABA gatsby-starter-gcn
+
+```js
+console.log('Writing config file...')
+  const configFilePath = path.resolve(__dirname, '..', '.contentful.json')
+  writeFileSync(
+    configFilePath,
+    JSON.stringify(
+      {
+        development: {
+          host: 'preview.contentful.com',
+          spaceId,
+          accessToken: previewToken,
+        },
+        production: {
+          spaceId,
+          accessToken,
+        },
+      },
+      null,
+      2
+    )
+  )
+  console.log(`Config file ${chalk.yellow(configFilePath)} written`)
+
+  return { spaceId, managementToken }
+})
+.then(({ spaceId, managementToken }) =>
+  spaceImport({ spaceId, managementToken, content: exportFile })
+)
+```
 
 A starter template to build amazing static websites with Gatsby, Contentful and Netlify. Inspired by [gatsby-contentful-starter](https://github.com/contentful-userland/gatsby-contentful-starter).
 
