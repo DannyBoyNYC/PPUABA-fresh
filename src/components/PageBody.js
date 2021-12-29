@@ -55,7 +55,7 @@ const Body = styled.div`
   ul {
     li {
       list-style: disc;
-      list-style-position: inside;
+      /* list-style-position: inside; */
       line-height: 1.25;
       &:last-child {
         margin: 0;

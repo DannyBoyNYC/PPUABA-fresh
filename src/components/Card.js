@@ -77,7 +77,7 @@ const Card = ({ slug, heroImage, title, publishDate, body, ...props }) => {
               backgroundColor={'#eeeeee'}
             />
             <Title>{title}</Title>
-            <Date>{publishDate}</Date>
+            <Date>Publish date {publishDate}</Date>
             <ReadingTime>
               {body.childMarkdownRemark.timeToRead} min read
             </ReadingTime>
