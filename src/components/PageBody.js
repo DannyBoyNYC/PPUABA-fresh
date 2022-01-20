@@ -66,7 +66,7 @@ const Body = styled.div`
   ol {
     li {
       list-style: decimal;
-      list-style-position: inside;
+      /* list-style-position: inside; */
       line-height: 1.25;
       &:last-child {
         margin: 0;
