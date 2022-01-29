@@ -255,6 +255,7 @@ type ContentfulPost implements ContentfulReference & ContentfulEntry & Node
   node_locale: String!
   title: String
   slug: String
+  caption: String
   ordering: Int
   publishDate: Date @dateformat
   heroImage: ContentfulAsset @link(by: "id", from: "heroImage___NODE")

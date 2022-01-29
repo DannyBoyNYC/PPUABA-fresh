@@ -21,8 +21,8 @@ const PostDetails = props => {
   return (
     <Wrapper>
       <Date>Published {props.date}</Date>
-      <span>•</span>
-      <ReadingTime>{`⏱️${props.timeToRead} min read `}</ReadingTime>
+      <span>⏱️</span>
+      <ReadingTime>{`${props.timeToRead} min read `}</ReadingTime>
     </Wrapper>
   )
 }
