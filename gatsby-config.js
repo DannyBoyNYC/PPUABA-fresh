@@ -85,12 +85,10 @@ module.exports = {
           : contentfulConfig.production,
     },
     {
-      resolve: 'gatsby-plugin-google-gtag',
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingIds: [process.env.GOOGLE_ANALYTICS || 'UA-XXXXXXXX-X'],
-        pluginConfig: {
-          head: true,
-        },
+        trackingId: process.env.GOOGLE_ANALYTICS || 'UA-XXXXXXXX-X',
+        head: true,
       },
     },
     // {
