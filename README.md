@@ -1,5 +1,9 @@
 # PPUABA gatsby-starter-gcn
 
+- updated nvmrc to 18.12.1
+- removed `"gatsby-plugin-google-analytics": "^4.2.0",`
+- note; `error gatsby-plugin-google-gtag@5.2.0: The engine "node" is incompatible with this module. Expected version ">=18.0.0". Got "16.15.1"`
+
 ```js
 console.log('Writing config file...')
   const configFilePath = path.resolve(__dirname, '..', '.contentful.json')

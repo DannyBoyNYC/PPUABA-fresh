@@ -1,4 +1,6 @@
+// eslint-disable-next-line
 let contentfulConfig
+
 try {
   contentfulConfig = require('./.contentful')
 } catch (e) {
@@ -83,12 +85,21 @@ module.exports = {
           : contentfulConfig.production,
     },
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: 'gatsby-plugin-google-gtag',
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS || 'UA-XXXXXXXX-X',
-        head: true,
+        trackingIds: [process.env.GOOGLE_ANALYTICS || 'UA-XXXXXXXX-X'],
+        pluginConfig: {
+          head: true,
+        },
       },
     },
+    // {
+    //   resolve: 'gatsby-plugin-google-analytics',
+    //   options: {
+    //     trackingId: process.env.GOOGLE_ANALYTICS || 'UA-XXXXXXXX-X',
+    //     head: true,
+    //   },
+    // },
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
