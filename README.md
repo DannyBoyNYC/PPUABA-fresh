@@ -1,5 +1,9 @@
 # PPUABA gatsby-starter-gcn
 
+`$ curl --compressed -svo /dev/null https://www.ppuaba.org/ 2>&1 | egrep -i 'cache-control'< cache-control: public,max-age=31560000,immutable`
+
+## Analytics
+
 - updated nvmrc to 18.12.1
 - removed `"gatsby-plugin-google-analytics": "^4.2.0",`
 - note; `error gatsby-plugin-google-gtag@5.2.0: The engine "node" is incompatible with this module. Expected version ">=18.0.0". Got "16.15.1"`
