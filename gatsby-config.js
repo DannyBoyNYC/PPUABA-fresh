@@ -106,7 +106,15 @@ module.exports = {
         icon: './static/images/favicon.png',
       },
     },
-    'gatsby-plugin-offline',
+    // 'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        workboxConfig: {
+          importWorkboxFrom: `cdn`,
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-schema-snapshot`,
       options: {
