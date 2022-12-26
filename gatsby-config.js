@@ -122,6 +122,6 @@ module.exports = {
         update: process.env.GATSBY_UPDATE_SCHEMA_SNAPSHOT,
       },
     },
-    'gatsby-plugin-netlify',
+    // 'gatsby-plugin-netlify',
   ],
 }
